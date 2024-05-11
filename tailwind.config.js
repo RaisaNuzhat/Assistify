@@ -8,7 +8,7 @@ export default {
     extend: {
       fontFamily: 
       {
-        Montserrat:"'Roboto', sans-serif"
+        Roboto:"'Roboto', sans-serif"
       }
     },
   },
