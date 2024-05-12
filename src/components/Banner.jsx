@@ -10,6 +10,7 @@ import img2 from '../assets/volunteer-2654000_1280.jpg'
 import img3 from '../assets/volunteer-6772196_1280.jpg'
 import img4 from '../assets/volunteer-6800977_1280.jpg'
 import img5 from '../assets/volunteer-service-6772198_1280.jpg'
+
 const Banner = () => {
     return (
         <div className='container mx-auto my-10 flex justify-center  items-center'>

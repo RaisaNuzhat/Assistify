@@ -27,28 +27,7 @@ const NavBar = () => {
                     <span className='font-bold  lg:text-2xl text-[18px]'>Assistify</span>
                 </Link>
             </div>
-            {/* <div>
-                <div className="dropdown  ">
-                    <div className="my-auto lg:text-xl">My Profile</div>
-                    <ul
-                        tabIndex={0}
-                        className='menu menu-sm dropdown-content mt-3 z-[1] text-black font-Roboto lg:text-xl text-[14px] p-2 shadow bg-base-100 rounded-box w-52'
-                    >
-
-                        <li>
-                            <Link to='/addvolunteer' >
-                                Add Volunteer
-                            </Link>
-                        </li>
-                        <li>
-                            <Link to='/managemyposts'>Manage My Posts</Link>
-                        </li>
-                    </ul>
-
-
-
-                </div>
-            </div> */}
+       
 
             <div className='flex items-center justify-evenly gap-4 w-1/2'>
                 <ul className='menu menu-horizontal px-1 text-[14px] lg:text-xl'>
