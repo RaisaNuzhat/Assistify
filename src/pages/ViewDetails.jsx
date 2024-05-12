@@ -2,8 +2,8 @@
 
 const ViewDetails = () => {
     return (
-        <div>
-            <h5>ok</h5>
+        <div className="mx-auto container flex justify-center">
+            
         </div>
     );
 };
