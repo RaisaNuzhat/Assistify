@@ -2,7 +2,7 @@
 import { Link } from "react-router-dom";
 
 const VolunteerCard = ({volunteer}) => {
-    const {posttitle,image,location} = volunteer
+    const {_id,posttitle,image,location} = volunteer
     return (
         <div>
             <div className="card w-96 bg-[#f2f9f1] shadow-xl font-Roboto">
@@ -13,7 +13,7 @@ const VolunteerCard = ({volunteer}) => {
                     <h2 className="card-title">{posttitle}</h2>
                     <p>{location}</p>
                     <div className="card-actions">
-                        <Link to='/viewdetails' className="btn bg-[#5c715e] text-white">View Details</Link>
+                        <Link to={`/viewdetails/${_id}`} className="btn bg-[#5c715e] text-white">View Details</Link>
                     </div>
                 </div>
             </div>

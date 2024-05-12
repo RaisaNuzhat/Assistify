@@ -59,8 +59,11 @@ export const router = createBrowserRouter([
           loader: () => fetch(`${import.meta.env.VITE_API_URL}/volunteers`)
         },
         {
-          path: '/viewdetails',
-          element:<ViewDetails/>
+          path: '/viewdetails/:id',
+          loader: ({params}) => fetch(`${import.meta.env.VITE_API_URL}/volunteers/${params.id}`),
+          element:<Privateroute>
+            <ViewDetails/>
+          </Privateroute>
         }
 
 
