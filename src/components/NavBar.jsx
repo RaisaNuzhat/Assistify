@@ -59,7 +59,23 @@ const NavBar = () => {
                         <Link to='/needvolunteer'>Need Volunteer</Link>
                     </li>
 
-
+                    <li>
+                        <details>
+                            <summary>
+                                My Profile
+                            </summary>
+                            <ul className="p-2 bg-[#f2f9f1] text-[16px] rounded-t-none text-[#5c715e]">
+                            <li>
+                            <Link to='/addvolunteer' >
+                                Add Volunteer
+                            </Link>
+                        </li>
+                        <li>
+                            <Link to='/managemyposts'>Manage My Posts</Link>
+                        </li>
+                            </ul>
+                        </details>
+                    </li>
 
                     {/* theme */}
                     <label className="swap swap-rotate">

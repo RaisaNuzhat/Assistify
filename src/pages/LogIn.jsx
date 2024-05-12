@@ -1,6 +1,6 @@
 
 import { FcGoogle } from "react-icons/fc";
-import { useContext } from "react";
+import { useContext} from "react";
 import { AuthContext } from "../firebaseprovider/FirebaseProvider";
 import { useForm } from "react-hook-form";
 import Swal from 'sweetalert2'; 
@@ -14,9 +14,11 @@ const LogIn = () => {
         handleSubmit,
         formState: { errors },
     } = useForm()
+ 
     const location = useLocation();
     const navigate = useNavigate();
-    const from = location?.state || "/"
+    const from = location?.state || '/'
+
     const onSubmit = async (data) => {
         console.log("Form submitted:", data); 
         
@@ -70,7 +72,7 @@ const LogIn = () => {
 
                             </div>
                             <div className="form-control mt-6">
-                                <button className="btn bg-[#53a8b6] text-white">Login</button>
+                                <button className="btn bg-[#5c715e]  text-white">Login</button>
                             </div>
                             <div className="flex justify-center items-center">
                             <Link to='/register' href="#" className="label-text-alt link link-hover my-3 font-medium text-[18px]">New Here? Register Here</Link>

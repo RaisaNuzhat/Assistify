@@ -120,7 +120,7 @@ const Register = () => {
                                 }
                             </div>
                             <div className="form-control mt-6">
-                                <button className="btn bg-[#53a8b6] text-white">Register</button>
+                                <button className="btn bg-[#5c715e]  text-white">Register</button>
                             </div>
 
                             <div className="flex justify-center items-center">
