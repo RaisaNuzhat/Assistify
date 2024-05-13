@@ -3,6 +3,7 @@ import axios from 'axios'
 import { AuthContext } from '../firebaseprovider/FirebaseProvider';
 import { useLoaderData, useNavigate } from 'react-router-dom';
 import Swal from 'sweetalert2'
+import { Helmet } from 'react-helmet';
 const BeAVolunteer = () => {
     
     const viewVolunteer = useLoaderData();
@@ -49,6 +50,11 @@ const BeAVolunteer = () => {
     //console.log(user)
     return (
         <div className="container mx-auto flex justify-center my-10 font-Roboto">
+             <Helmet>
+                <title>
+                    Assistify|Be A Volunteer
+                </title>
+            </Helmet>
             <form onSubmit={handleAddRequest}>
                 <div className='grid grid-cols-1 gap-6 mt-4 sm:grid-cols-2'>
                     <div>

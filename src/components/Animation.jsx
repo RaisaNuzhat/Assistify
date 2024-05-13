@@ -9,9 +9,9 @@ const Animation = () => {
 
 
             </h3>
-            <p className="font-Roboto font-medium my-6 text-center lg:text-[18px]  text-[16px]">
+            <p className="font-Roboto font-normal my-6 text-center lg:text-[18px]  text-[16px]">
 
-            Whether you are passionate about environmental sustainability,  social justice, or community development,   there is a place for you here. Join hands with like-minded individuals and organizations as we work together to tackle pressing issues, foster collaboration, and build a brighter future for all.</p>
+            Whether you are passionate about environmental sustainability,  social justice, or community development, <br />  there is a place for you here. Join hands with like-minded individuals and organizations as we work together to <br /> tackle pressing issues, foster collaboration, and build a brighter future for all.</p>
             <div className="w-1/3 flex justify-center items-center mx-auto" >
             <Lottie animationData={animation} loop={true} />
             </div>

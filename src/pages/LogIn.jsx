@@ -6,6 +6,7 @@ import { useForm } from "react-hook-form";
 import Swal from 'sweetalert2'; 
 import 'sweetalert2/dist/sweetalert2.css'; 
 import { Link, useLocation, useNavigate } from "react-router-dom";
+import { Helmet } from "react-helmet";
 
 const LogIn = () => {
     const { signinUser ,signinWithGoogle} = useContext(AuthContext)
@@ -47,7 +48,12 @@ const LogIn = () => {
     };
     return (
         <div>
-            <div className="hero min-h-screen bg-base-200 my-14">
+            <div className="hero min-h-screen bg-base-200 my-14 font-Roboto">
+            <Helmet>
+                <title>
+                    Assistify|Login 
+                </title>
+            </Helmet>
                 <div className="hero-content flex-col lg:flex-row-reverse">
                     <div className="text-center lg:text-left">
                         <h1 className="text-5xl font-bold">Login now!</h1>

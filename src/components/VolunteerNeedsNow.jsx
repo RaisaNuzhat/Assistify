@@ -4,6 +4,7 @@ import { Link } from "react-router-dom";
 import VolunteerCard from "./VolunteerCard";
 import { useEffect, useState } from "react";
 import axios from "axios";
+import { Helmet } from "react-helmet";
 
 
 const VolunteerNeedsNow = () => {
@@ -20,6 +21,11 @@ const VolunteerNeedsNow = () => {
 
     return (
         <div className="container mx-auto my-16 flex flex-col justify-center items-center font-Roboto">
+             <Helmet>
+                <title>
+                    Assistify|Volunteer Needs Now
+                </title>
+            </Helmet>
             <h3 className="my-10 lg:text-5xl sm:text-[18px] text-center font-medium text-[#5c715e]">Volunteer Needs Now</h3>
             <select
                 onChange={e => {

@@ -1,10 +1,17 @@
+import { Helmet } from "react-helmet";
 import { Link, useLoaderData } from "react-router-dom";
 
 const ViewDetails = () => {
     const viewVolunteer = useLoaderData();
     const { _id,posttitle, image, location, description, noofvolunteers, category, deadline } = viewVolunteer
     return (
+
         <div className="mx-auto container flex flex-col justify-center font-Roboto">
+             <Helmet>
+                <title>
+                    Assistify|View Details 
+                </title>
+            </Helmet>
             <h3 className="font-semibold lg:text-3xl text-[16px] text-center my-7 text-[#5c715e]">Volunteer Needs Posts Detail</h3>
             <section>
                 <div className="dark:bg-violet-600 bg-[#ddeedf]">

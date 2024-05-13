@@ -5,6 +5,7 @@ import Swal from 'sweetalert2'
 import { AuthContext } from '../firebaseprovider/FirebaseProvider';
 import { useLoaderData, useNavigate } from 'react-router-dom';
 import axios from 'axios'
+import { Helmet } from 'react-helmet';
 const Update = () => {
     const [startDate, setStartDate] = useState(new Date())
     const { user } = useContext(AuthContext)
@@ -46,6 +47,11 @@ const Update = () => {
         }
     return (
         <div>
+             <Helmet>
+                <title>
+                    Assistify|Update 
+                </title>
+            </Helmet>
             <form onSubmit={handleUpdate} className="card-body">
                 <div className="form-control font-Roboto ">
                     <label className="label">

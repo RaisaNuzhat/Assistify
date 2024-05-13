@@ -5,6 +5,7 @@ import Swal from 'sweetalert2'
 import { AuthContext } from '../firebaseprovider/FirebaseProvider';
 import { useNavigate } from 'react-router-dom';
 import axios from 'axios'
+import { Helmet } from 'react-helmet';
 const AddVolunteer = () => {
     const [startDate, setStartDate] = useState(new Date())
     const {user}  = useContext(AuthContext)
@@ -47,7 +48,11 @@ const AddVolunteer = () => {
     }
     return (
         <div>
-
+              <Helmet>
+                <title>
+                    Assistify|Add Volunteer 
+                </title>
+            </Helmet>
             <form onSubmit={handleAddVolunteer} className="card-body">
                 <div className="form-control font-Roboto ">
                     <label className="label">

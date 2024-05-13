@@ -7,6 +7,7 @@ import 'sweetalert2/dist/sweetalert2.css';
 import { useContext } from "react"
 import { FaEye } from "react-icons/fa";
 import { FaEyeSlash } from "react-icons/fa";
+import { Helmet } from "react-helmet";
 
 const Register = () => {
     const { createUser, updateUserProfile } = useContext(AuthContext)
@@ -70,6 +71,11 @@ const Register = () => {
     }
     return (
         <div>
+              <Helmet>
+                <title>
+                    Assistify|Register 
+                </title>
+            </Helmet>
            <div className="hero min-h-screen bg-base-200 my-14">
                 <div className="hero-content flex-col lg:flex-row-reverse">
                     <div className="text-center lg:text-left">
