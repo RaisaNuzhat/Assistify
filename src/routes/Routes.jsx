@@ -11,6 +11,7 @@ import ManageMyPosts from '../pages/ManageMyPosts';
 import Privateroute from '../components/Privateroute';
 import NeedVolunteer from '../pages/NeedVolunteer'
 import ViewDetails from '../pages/ViewDetails';
+import BeAVolunteer from '../pages/BeAVolunteer';
 export const router = createBrowserRouter([
   {
     path: '/',
@@ -63,6 +64,13 @@ export const router = createBrowserRouter([
           loader: ({params}) => fetch(`${import.meta.env.VITE_API_URL}/volunteers/${params.id}`),
           element:<Privateroute>
             <ViewDetails/>
+          </Privateroute>
+        },
+        {
+          path:'/beavolunteer/:id',
+          loader: ({params}) => fetch(`${import.meta.env.VITE_API_URL}/volunteers/${params.id}`),
+          element:<Privateroute>
+            <BeAVolunteer/>
           </Privateroute>
         }
 

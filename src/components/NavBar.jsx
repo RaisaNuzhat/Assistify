@@ -43,7 +43,7 @@ const NavBar = () => {
                             <summary>
                                 My Profile
                             </summary>
-                            <ul className="p-2 bg-[#f2f9f1] text-[16px] rounded-t-none text-[#5c715e]">
+                            <ul className="p-2 bg-[#f2f9f1] text-[16px] z-30 rounded-t-none text-[#5c715e]">
                             <li>
                             <Link to='/addvolunteer' >
                                 Add Volunteer
