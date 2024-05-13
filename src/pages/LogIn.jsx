@@ -63,25 +63,24 @@ const LogIn = () => {
     };
 
     const handleGoogleSignIn = async () => {
-
         try {
-            const result = await signinWithGoogle()
-            const data = await axios.post(
+            const result = await signinWithGoogle();
+            const { data } = await axios.post(
                 `${import.meta.env.VITE_API_URL}/jwt`,
                 {
                     email: result?.user?.email,
                 },
                 { withCredentials: true }
-            )
-            console.log(data)
-            navigate(from, { replace: true })
+            );
 
-        }
-        catch (err) {
-            console.log(err)
+            console.log("JWT Token:", data.token);
 
+            navigate(from, { replace: true });
+        } catch (error) {
+            console.error("Error signing in with Google:", error);
         }
-    }
+    };
+
     return (
         <div>
             <div className="hero min-h-screen bg-base-200 my-14 font-Roboto">

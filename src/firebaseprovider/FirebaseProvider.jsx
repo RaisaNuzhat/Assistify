@@ -4,6 +4,7 @@ import { createUserWithEmailAndPassword,signInWithEmailAndPassword ,signInWithPo
 import auth from "../firebase/firebase.init";
 import { GoogleAuthProvider } from "firebase/auth";
 import { onAuthStateChanged } from "firebase/auth";
+import axios from "axios";
 
 //import { useLocation, useNavigate } from "react-router-dom";
 export const AuthContext = createContext(null);
@@ -58,10 +59,11 @@ const FirebaseProvider = ({children}) => {
         }
         //github login
      
-        const logOut = () =>
+        const logOut = async () =>
         {
             setUser(null)
-            
+            const {data} =await axios(`${import.meta.env.VITE_API_URL}/logout`,{withCredentials:true})
+            console.log(data)
             signOut(auth)
         }
           //observer
