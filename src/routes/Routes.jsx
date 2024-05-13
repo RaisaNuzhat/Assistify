@@ -12,6 +12,7 @@ import Privateroute from '../components/Privateroute';
 import NeedVolunteer from '../pages/NeedVolunteer'
 import ViewDetails from '../pages/ViewDetails';
 import BeAVolunteer from '../pages/BeAVolunteer';
+import MyVolunteerRequests from '../pages/MyVolunteerRequests';
 export const router = createBrowserRouter([
   {
     path: '/',
@@ -71,6 +72,12 @@ export const router = createBrowserRouter([
           loader: ({params}) => fetch(`${import.meta.env.VITE_API_URL}/volunteers/${params.id}`),
           element:<Privateroute>
             <BeAVolunteer/>
+          </Privateroute>
+        },
+        {
+          path:'/myvolunteerrequest',
+          element:<Privateroute>
+            <MyVolunteerRequests/>
           </Privateroute>
         }
 
