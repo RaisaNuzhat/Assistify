@@ -18,20 +18,20 @@ const MyVolunteerRequests = () => {
 
                 <table className="w-full p-6 text-xs text-center whitespace-nowrap">
                     <colgroup>
-                        <col className="w-5" />
+                        <col className="w-4" />
                         <col />
                         <col />
                         <col />
                         <col />
-                        <col />
-                        <col className="w-5" />
+                        
+                        <col className="w-4" />
                     </colgroup>
                     <thead>
                         <tr className="dark:bg-gray-300 text-[#5c715e] font-Roboto">
-                            <th className=" px-3 py-2 w-1/5 text-xl font-medium">Post Title</th>
-                            <th className=" px-3 py-2 w-1/5 text-xl font-medium">Deadline</th>
-                            <th className=" px-3 py-2 w-1/5 text-xl font-medium">Category</th>
-                            <th className=" px-3 py-2 w-1/5 text-xl font-medium">Cancel</th>
+                            <th className=" px-3 py-2 w-1/4 text-xl font-medium">Post Title</th>
+                            <th className=" px-3 py-2 w-1/4 text-xl font-medium">Deadline</th>
+                            <th className=" px-3 py-2 w-1/4 text-xl font-medium">Category</th>
+                            <th className=" px-3 py-2 w-1/4 text-xl font-medium">Cancel</th>
                         </tr>
                     </thead>
                 </table>
