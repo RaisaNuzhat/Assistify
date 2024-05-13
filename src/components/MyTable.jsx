@@ -53,28 +53,22 @@ const MyTable = ({ item }) => {
                         <tbody className="border-b  dark:bg-gray-50 dark:border-gray-300">
                             <tr>
  
-                                <td className="px-3 py-2 w-1/5 text-[12px] lg:text-[14px] text-center font-medium dark:text-gray-600">
+                                <td className="px-3 py-2 w-1/4 text-[12px] lg:text-[14px] text-center font-medium dark:text-gray-600">
                                     <p className="text-center">{item.posttitle}</p>
                                 </td>
-                                <td className="px-3 py-2  w-1/5 text-[12px] lg:text-[14px] text-center font-medium dark:text-gray-600">
+                                <td className="px-3 py-2  w-1/4 text-[12px] lg:text-[14px] text-center font-medium dark:text-gray-600">
 
                                     <p className="text-center">{item.location}</p>
                                 </td>
-                                <td className="px-3 py-2 w-1/5 text-[12px] lg:text-[14px] text-center font-medium dark:text-gray-600">
-                                    <p className="text-center">{item.category}</p>
-                                </td>
-
-
-                                <td className="px-3 py-2 w-1/5 text-[12px] lg:text-[14px] text-center font-medium dark:text-gray-600">
-                                    <Link to={`/update/${item._id}`} className="btn  bg-[#5c715e] text-[16px] font-medium text-white">Update</Link>
+                                <td className="px-3 py-2 w-1/4 text-[12px] lg:text-[14px] text-center font-medium dark:text-gray-600">
+                                    <Link to={`/update/${item._id}`} className="btn  bg-[#5c715e] text-[16px] lg:font-medium font-normal text-white">Update</Link>
 
                                 </td>
 
-                                <td className="px-3 py-2 w-1/5 text-[12px] lg:text-[14px] text-center font-medium dark:text-gray-600">
-                                    <button onClick={() => handleDelete(item._id)}   className="btn  bg-[#5c715e] text-[16px] font-medium text-white">Delete</button> 
+                                <td className="px-3 py-2 w-1/4 text-[12px] lg:text-[14px] text-center font-medium dark:text-gray-600">
+                                    <button onClick={() => handleDelete(item._id)}   className="btn  bg-[#5c715e] text-[16px] lg:font-medium font-normal text-white">Delete</button> 
 
                                 </td>
-
                             </tr>
 
                         </tbody>

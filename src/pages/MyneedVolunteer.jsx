@@ -30,11 +30,10 @@ const MyneedVolunteer = () => {
                         </colgroup>
                          <thead>
                             <tr className="dark:bg-gray-300 text-[#5c715e] font-Roboto">
-                                <th className=" px-3 py-2 w-1/5 text-[16px] lg:text-xl font-medium">Post Title</th>
-                                <th className=" px-3 py-2 w-1/5 text-[16px] lg:text-xl font-medium">Location</th>
-                                <th className=" px-3 py-2 w-1/5 text-[16px] lg:text-xl font-medium">Category</th>
-                                <th className=" px-3 py-2 w-1/5 text-[16px] lg:text-xl font-medium">Update</th>
-                                <th className=" px-3 py-2 w-1/5 text-[16px] lg:text-xl font-medium">Delete</th>
+                                <th className=" px-3 py-2 w-1/4 text-[16px] lg:text-xl font-medium">Post Title</th>
+                                <th className=" px-3 py-2 w-1/4 text-[16px] lg:text-xl font-medium">Location</th>
+                                <th className=" px-3 py-2 w-1/4 text-[16px] lg:text-xl font-medium">Update</th>
+                                <th className=" px-3 py-2 w-1/4 text-[16px] lg:text-xl font-medium">Delete</th>
                                 
                                
                             </tr>
