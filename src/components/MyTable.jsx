@@ -1,56 +1,39 @@
 /* eslint-disable react/prop-types */
 import { Link } from "react-router-dom";
-//import Swal from "sweetalert2";
-
+import Swal from "sweetalert2";
+import axios from "axios";
 const MyTable = ({ item }) => {
     console.log(item)
- 
-//     const handleDelete = _id =>
-//     {
-//        console.log(_id)
-//        Swal.fire({
-//         title: "Are you sure?",
-//         text: "You won't be able to revert this!",
-//         icon: "warning",
-//         showCancelButton: true,
-//         confirmButtonColor: "#3085d6",
-//         cancelButtonColor: "#d33",
-//         confirmButtonText: "Yes, delete it!"
-//       }).then((result) => {
-//         if (result.isConfirmed) {
-//         //   Swal.fire({
-//         //     title: "Deleted!",
-//         //     text: "Your file has been deleted.",
-//         //     icon: "success"
-//         //   });
-//         console.log('delete hoise')
-//         fetch(`https://assignment-10-server-psi-rouge.vercel.app
-// /spot/${_id}`,
-//     {
-//         method:'DELETE',
-     
-//     })
-       
-    
-//            .then( 
-//             res =>
-//              res.json()
-//            )
-//            .then ((data) =>
-//         {
-//             console.log(data)
-//             if(data.deletedCount > 0)
-//             {
-//                 Swal.fire({
-//                          title: "Deleted!",
-//                         text: "Your file has been deleted.",
-//                        icon: "success"
-//                       });
-//             }
-//         })
-//         }
-//       });
-//     }
+    const handleDelete =  _id =>
+    {
+       console.log(_id)
+       Swal.fire({
+        title: "Are you sure?",
+        text: "You won't be able to revert this!",
+        icon: "warning",
+        showCancelButton: true,
+        confirmButtonColor: "#3085d6",
+        cancelButtonColor: "#d33",
+        confirmButtonText: "Yes, delete it!"
+      }).then(async(result) => {
+        if (result.isConfirmed) {
+        try {
+            const { data } = await axios.delete(`${import.meta.env.VITE_API_URL}/volunteers/${_id}`)
+            console.log(data)
+            if(data.deletedCount > 0)
+                {
+                    Swal.fire({
+                             title: "Deleted!",
+                            text: "Your file has been deleted.",
+                           icon: "success"
+                          });
+                } 
+          } catch (err) {
+            console.log(err.message)
+          }
+        }
+      });
+    } 
     return (
         <div>
             <div className="container p-2 mx-auto sm:p-4 dark:text-gray-800">
@@ -88,7 +71,7 @@ const MyTable = ({ item }) => {
                                 </td>
 
                                 <td className="px-3 py-2 w-1/5 text-[16px] text-center font-medium dark:text-gray-600">
-                                    <button  className="btn  bg-[#5c715e] text-[16px] font-medium text-white">Delete</button> 
+                                    <button onClick={() => handleDelete(item._id)}   className="btn  bg-[#5c715e] text-[16px] font-medium text-white">Delete</button> 
 
                                 </td>
 
