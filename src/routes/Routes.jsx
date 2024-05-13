@@ -44,7 +44,8 @@ export const router = createBrowserRouter([
           </Privateroute>,
         },
         {
-          path:'/update',
+          path:'/update/:id',
+          loader:({params}) => fetch(`${import.meta.env.VITE_API_URL}/volunteers/${params.id}`),
           element:<Privateroute>
             <Update/>
           </Privateroute>

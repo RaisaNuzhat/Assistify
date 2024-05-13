@@ -114,7 +114,7 @@ const AddVolunteer = () => {
 
                 </div>
                 <div className="form-control mt-6">
-                    <button className="btn bg-[#b6cdbd]   text-2xl font-medium text-white">Add Post</button>
+                    <button className="btn bg-[#5c715e]   text-2xl font-medium text-white">Add Post</button>
                 </div>
             </form>
         </div>

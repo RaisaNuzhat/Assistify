@@ -83,7 +83,7 @@ const MyTable = ({ item }) => {
 
 
                                 <td className="px-3 py-2 w-1/5 text-[16px] text-center font-medium dark:text-gray-600">
-                                    <Link to='/update' className="btn  bg-[#5c715e] text-[16px] font-medium text-white">Update</Link>
+                                    <Link to={`/update/${item._id}`} className="btn  bg-[#5c715e] text-[16px] font-medium text-white">Update</Link>
 
                                 </td>
 
