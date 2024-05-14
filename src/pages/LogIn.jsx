@@ -65,15 +65,10 @@ const LogIn = () => {
     const handleGoogleSignIn = async () => {
         try {
             const result = await signinWithGoogle();
-            const { data } = await axios.post(
-                `${import.meta.env.VITE_API_URL}/jwt`,
-                {
-                    email: result?.user?.email,
-                },
-                { withCredentials: true }
-            );
-
-            console.log("JWT Token:", data.token);
+            //console.log(result?.user.email)
+            console.log(result)
+            
+            //console.log("JWT Token:", data.token);
 
             navigate(from, { replace: true });
         } catch (error) {
@@ -89,12 +84,12 @@ const LogIn = () => {
                         Assistify|Login
                     </title>
                 </Helmet>
-                <div className="hero-content flex-col lg:flex-row-reverse">
+                <div className="hero-content flex-col lg:flex-row-reverse rounded-lg bg-[#f2f9f1]">
                     <div className="text-center lg:text-left">
                         <h1 className="text-5xl font-bold">Login now!</h1>
                         <p className="py-6">Login to your  account to explore, connect, and discover. Access your personalized dashboard and start your journey today.</p>
                     </div>
-                    <div className="card shrink-0 w-full max-w-sm shadow-2xl bg-base-100">
+                    <div className="card shrink-0 w-full max-w-sm shadow-2xl ">
                         <form onSubmit={handleSubmit(onSubmit)} className="card-body">
                             <div className="form-control">
                                 <label className="label">

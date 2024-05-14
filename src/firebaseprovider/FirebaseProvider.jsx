@@ -62,27 +62,38 @@ const FirebaseProvider = ({children}) => {
         const logOut = async () =>
         {
             setUser(null)
-            const {data} =await axios(`${import.meta.env.VITE_API_URL}/logout`,{withCredentials:true})
+            const {data} =await axios.post(`${import.meta.env.VITE_API_URL}/logout`,{},{withCredentials:true})
             console.log(data)
             signOut(auth)
         }
           //observer
-    useEffect(
-        () =>
-        {
-            const unsubscribe = onAuthStateChanged(auth, (user) => {
-                if (user) {
-                 setUser(user)
-                 setLoading(false)
-                } else {
-                  // User is signed out
-                  // ...
-                  setLoading(false)
+          useEffect(() => {
+            const unsubscribe = onAuthStateChanged(auth, currentUser => {
+                const userEmail = currentUser?.email || user?.email;
+                const loggedUser = { email: userEmail };
+                setUser(currentUser);
+                console.log('current user', currentUser);
+                setLoading(false);
+                // if user exists then issue a token
+                if (currentUser) {
+                    axios.post('https://11th-assignment-server-five.vercel.app/jwt', loggedUser, { withCredentials: true })
+                        .then(res => {
+                            console.log('token response', res.data);
+                        })
                 }
-              });
-              return () => unsubscribe()
-        }
-        ,[] )
+                else {
+                    axios.post('https://11th-assignment-server-five.vercel.app/logout', loggedUser, {
+                        withCredentials: true
+                    })
+                        .then(res => {
+                            console.log(res.data);
+                        })
+                }
+            });
+            return () => {
+                return unsubscribe();
+            }
+        }, [])
     const allvalues = {
         createUser,
         signinUser,

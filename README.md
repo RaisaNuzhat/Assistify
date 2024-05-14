@@ -4,7 +4,7 @@ Assistify is a volunteer management website aimed at connecting volunteers with 
 
 ## Live Site
 
-Check out the live site .
+Check out the live site https://th-assignment-376c0.web.app
 
 ## Features
 
