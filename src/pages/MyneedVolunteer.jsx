@@ -16,6 +16,9 @@ const MyneedVolunteer = () => {
     }, [])
     return (
         <div>
+             {item.length === 0 ? (
+            <p className="text-center lg:text-3xl text-[18px] my-10 font-medium text-gray-500">No Posts Available</p>
+        ) : (
              <div className="my-10 mx-auto container flex flex-col justify-center">
 
             <table className="w-full p-6 text-xs text-center whitespace-nowrap">
@@ -49,7 +52,7 @@ const MyneedVolunteer = () => {
                 </MyTable>)
             }
            </div>
-        </div>
+        </div> )}
         </div>
     );
 };
