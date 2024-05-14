@@ -13,8 +13,9 @@ const Home = () => {
                     Assistify|Home
                 </title>
             </Helmet>
-            <Banner/>
+           
             <Efeature/>
+            <Banner/>
             <VolunteerNeedsNow />
             <Animation/>
         </div>
