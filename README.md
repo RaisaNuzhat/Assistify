@@ -18,6 +18,13 @@ Check out the live site https://th-assignment-376c0.web.app
 
 To get started with Assistify, simply sign up for an account on the website and start exploring volunteer opportunities in your area. Organizations can create an account to post volunteer listings and manage their volunteer programs effectively.
 
+## Technologies Used
+- **React.js**
+- **Firebase**
+- **MongoDB**
+- **Tailwind CSS**
+- **Express**
+
 
 
 ## Support
@@ -35,11 +42,3 @@ If you encounter any issues or have any questions about Assistify, please don't 
 
 
 
-# React + Vite
-
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
-
-Currently, two official plugins are available:
-
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
